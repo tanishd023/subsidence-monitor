@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural Subsidence Monitoring Station</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <header>
+            <h1>Structural Monitoring Station</h1>
+            <p class="subtitle">Real-time Dual-Node Subsidence Analyzer</p>
+        </header>
+
+        <!-- Dynamic Status Section -->
+        <div id="status-card" class="status-box state-normal">
+            <div class="status-indicator"></div>
+            <span id="status-text">Synchronizing Data Streams...</span>
+        </div>
+
+        <!-- Node Metrics Grid -->
+        <main class="grid-container">
+            <!-- Node 1 Card -->
+            <section class="node-card master-node">
+                <div class="node-header">
+                    <h2>Node 01</h2>
+                    <span class="badge">Master</span>
+                </div>
+                <div class="metric-group">
+                    <div class="metric-label">Gap Distance</div>
+                    <div id="n1-dist" class="metric-value">--.-- <span class="unit">cm</span></div>
+                </div>
+                <div class="metric-group">
+                    <div class="metric-label">Axis Tilt Angle</div>
+                    <div id="n1-tilt" class="metric-value">--.-- <span class="unit">°</span></div>
+                </div>
+            </section>
+
+            <!-- Node 2 Card -->
+            <section class="node-card satellite-node">
+                <div class="node-header">
+                    <h2>Node 02</h2>
+                    <span class="badge">Satellite</span>
+                </div>
+                <div class="metric-group">
+                    <div class="metric-label">Gap Distance</div>
+                    <div id="n2-dist" class="metric-value">--.-- <span class="unit">cm</span></div>
+                </div>
+                <div class="metric-group">
+                    <div class="metric-label">Axis Tilt Angle</div>
+                    <div id="n2-tilt" class="metric-value">--.-- <span class="unit">°</span></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>System Polling Interval: 3000ms | Live Cloud Link Enabled</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
